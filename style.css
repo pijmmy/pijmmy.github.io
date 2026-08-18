@@ -1,0 +1,111 @@
+/* Paul Walton — shared stylesheet. Keep it minimal. */
+
+:root {
+  --text: #1a1a1a;
+  --muted: #666;
+  --bg: #fdfdfb;
+  --link: #1a1a1a;
+  --max-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 3rem 1.25rem 6rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto 2.5rem;
+}
+
+header.site-header h1 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+  font-weight: normal;
+}
+
+header.site-header h1 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-right: 1.2rem;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.25; }
+
+a { color: var(--link); }
+a:hover { color: var(--muted); }
+
+.post-list { list-style: none; padding: 0; margin: 0; }
+
+.post-list li {
+  margin-bottom: 1.1rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+}
+
+.post-list time {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-list a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.post-list a:hover { border-bottom-color: var(--muted); }
+
+article.post header {
+  margin-bottom: 2rem;
+}
+
+article.post header time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+article.post h1 {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+article.post p { margin: 1.1em 0; }
+
+article.post blockquote {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 3px solid #ddd;
+  color: var(--muted);
+}
+
+footer.site-footer {
+  max-width: var(--max-width);
+  margin: 4rem auto 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
